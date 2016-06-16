@@ -16,5 +16,11 @@ namespace WebApplication1.Controller
         {
             return "Hello World";
         }
+        [HttpPost]
+        [Route("{saved:int=90}") ]
+        public string SaveWorld(string Saved)
+        {
+            return "Hello World";
+        }
     }
 }

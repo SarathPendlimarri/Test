@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Security;
-using System.Web.SessionState;
+using System.Web.Http;
+using WebApplication1.App_Start;
 
 namespace WebApplication1
 {
@@ -12,7 +9,8 @@ namespace WebApplication1
 
         protected void Application_Start(object sender, EventArgs e)
         {
-
+           // RegisterRoutes.Register(GlobalConfiguration.Configuration);
+           GlobalConfiguration.Configure(RegisterRoutes.Register);
         }
 
         protected void Session_Start(object sender, EventArgs e)
